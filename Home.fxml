@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane styleClass="background" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeController">
+   <children>
+      <StackPane layoutX="-67.0" layoutY="-53.0" prefHeight="800.0" prefWidth="800.0" styleClass="background" stylesheets="@../application.css">
+         <children>
+            <Button fx:id="enterButton" mnemonicParsing="false" onAction="#handle" prefHeight="39.0" prefWidth="95.0" styleClass="button" stylesheets="@../application.css" text="Enter" translateX="30.0" translateY="100.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="homeLabel" prefHeight="68.0" prefWidth="286.0" styleClass="homeLabel" stylesheets="@../application.css" text="Game Tracker" translateX="30.0" translateY="-80.0">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

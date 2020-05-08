@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MenuController">
+   <children>
+      <StackPane prefHeight="800.0" prefWidth="800.0" styleClass="background" stylesheets="@../application.css">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#handle" stylesheets="@../application.css" text="Back" translateX="-350.0" translateY="-375.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="616.0" stroke="#062cd3" strokeType="INSIDE" strokeWidth="10.0" translateX="-200.0" width="344.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="616.0" layoutX="238.0" layoutY="102.0" stroke="#062cd3" strokeType="INSIDE" strokeWidth="10.0" translateX="200.0" width="344.0" />
+            <Label text="Completed" textFill="WHITE" translateX="-200.0" translateY="-330.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="352.0" layoutY="395.0" text="In Progress" textFill="WHITE" translateX="200.0" translateY="-330.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handle" stylesheets="@../application.css" text="+Add game" translateX="330.0" translateY="-375.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </StackPane>
+      <ListView fx:id="completedList" layoutY="6.0" prefHeight="590.0" prefWidth="300.0" styleClass="background" stylesheets="@../application.css" translateX="50.0" translateY="100.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ListView>
+      <ListView fx:id="inProgressList" layoutY="6.0" prefHeight="590.0" prefWidth="300.0" styleClass="background" stylesheets="@../application.css" translateX="450.0" translateY="100.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ListView>
+   </children>
+</AnchorPane>
