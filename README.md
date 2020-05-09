@@ -1,6 +1,6 @@
 # MeepleMadness
 
-1.Download the zip file ""
+1.Download the zip file "gameTracker-groupProject.zip"
 
 2. Import the zip into Eclipse
 
