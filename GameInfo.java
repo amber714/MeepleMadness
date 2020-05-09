@@ -1,4 +1,7 @@
+// Author Otimeyin Efejuku cdy129
+
 package application.model;
+
 
 public class GameInfo {
 	private String gName, gConsole;

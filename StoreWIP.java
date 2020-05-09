@@ -1,16 +1,14 @@
+//Author Otimeyin Efejuku cdy129
+
 package application.model;
 import java.util.ArrayList;
 import java.io.*;
-import java.io.IOException;
-import java.io.File;
-import java.io.FileWriter;
 
 public class StoreWIP {
 	private String wipName;
 	private ArrayList<GameInfo> wip = new ArrayList<GameInfo>();
 
 	public StoreWIP(){
-		//this.wipName = wipName;
 	}
 
 //Getters/Setters---------------------------------------------------------------------------	
@@ -102,10 +100,28 @@ public class StoreWIP {
 		c.addGame(g);
 		removeGame(g);
 	}
-
-//Moves game to wanttotry arraylist	
-	public void switchToWantToTry(GameInfo g, StoreWantToTry w){
-		w.addGame(g);
-		removeGame(g);
+	
+	public boolean alreadyExists(GameInfo g, String fileName){
+		boolean exist = false;
+		try{
+			int count = 0;
+			String charset = "US-ASCII";
+			File file = new File(fileName);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), charset));
+			for(String line; (line = reader.readLine()) !=null;){
+				if(line.equals(g.getgName()+","+g.getgConsole())){
+					count++;
+				}
+			}
+			
+			if(count>0)
+				exist = true;
+			reader.close();
+			return exist;
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+		return exist;
 	}
+
 }
